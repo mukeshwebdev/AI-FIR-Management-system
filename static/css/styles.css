@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background-color: #343a40;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+}

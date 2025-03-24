@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <script>
+        // Show alert message if available
+        window.onload = function() {
+            var message = "{{ get_flashed_messages(category_filter=['success'])[0] }}";
+            if (message) {
+                alert(message);
+            }
+        };
+    </script>
+</head>
+<body>
+    <h2>Submit Your FIR</h2>
+    <form action="/user_dashboard" method="POST">
+        <textarea name="fir_text" required></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

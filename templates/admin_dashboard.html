@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/admin" class="active">Admin Dashboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Admin Dashboard</h2>
+        <p>Welcome, <b>{{ session['user'] }}</b>! Here are all submitted FIRs:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>FIR Text</th>
+                    <th>Predicted Section</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fir in firs %}
+                <tr>
+                    <td>{{ fir.id }}</td>
+                    <td>{{ fir.username }}</td>
+                    <td>{{ fir.fir_text }}</td>
+                    <td>{{ fir.section }}</td>
+                    <td>{{ fir.timestamp }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
