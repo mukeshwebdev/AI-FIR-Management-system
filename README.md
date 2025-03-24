@@ -41,7 +41,7 @@ Cloud-Based Database: Secure storage for FIR records.
 
 # Benefits & Impact
 Faster Case Registration: Reduces paperwork and human errors.
-
 Increased Transparency: Citizens can track their FIRs in real time.
-
 Crime Prevention: AI-driven insights help law enforcement predict and prevent crimes.
+
+Currently it is under development 
